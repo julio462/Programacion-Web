@@ -1,0 +1,15 @@
+CREATE TABLE usuarios (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    email TEXT UNIQUE NOT NULL,
+    password TEXT NOT NULL
+);
+
+CREATE TABLE tareas (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    usuario_id INTEGER NOT NULL,
+    descripcion TEXT NOT NULL,
+    fecha TEXT,
+    prioridad TEXT,
+    completada INTEGER DEFAULT 0,
+    FOREIGN KEY(usuario_id) REFERENCES usuarios(id)
+);

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mini Pokédex</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="pokedex">
+    <header class="pokedex__header">
+      <h1 class="pokedex__title">Mini Pokédex</h1>
+      <div class="pokedex__controls">
+        <input
+          class="pokedex__search"
+          type="text"
+          placeholder="Buscar Pokémon por nombre o ID"
+          aria-label="Buscar Pokémon"
+        />
+        <button class="pokedex__btn" type="button" aria-label="Cargar primeros 20 Pokémon">
+          Cargar Pokémon Iniciales
+        </button>
+      </div>
+    </header>
+<section class="pokemon-list"></section>
+
+    <section class="pokemon-detail" aria-live="polite"></section>
+
+    <section class="favorites">
+      <h2 class="favorites__title">Mis Favoritos</h2>
+      <div class="favorites__list"></div>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
